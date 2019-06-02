@@ -1,0 +1,315 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.header__logo {
+  width: 500px;
+  position: absolute;
+  opacity: 0.7;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header .scrollDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+  font-size: 20px;
+  opacity: 0.7;
+  cursor: pointer;
+  color: #6d6b6b;
+}
+
+.header .scrollDown__p {
+  margin-bottom: 15px;
+}
+
+.header .scrollDown__arrow {
+  font-size: 20px;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bruno19-220718.jpg") no-repeat center fixed;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.navbar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  opacity: 0.9;
+  z-index: 100;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+
+.navbar .group__logo {
+  width: 70px;
+  height: 70px;
+}
+
+.navbar .navbar__links {
+  margin-left: 20px;
+}
+
+.navbar .navbar__links :nth-child(1),
+.navbar .navbar__links :nth-child(2),
+.navbar .navbar__links :nth-child(3) {
+  margin-right: 10px;
+}
+
+.navbar .navbar__links .links__elem {
+  text-decoration: none;
+  color: #6d6b6b;
+}
+
+.section {
+  height: 500px;
+}
+
+footer {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  position: relative;
+}
+
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90%;
+  padding-top: 90px;
+}
+
+footer .wrapper .group {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .wrapper .group .info {
+  text-align: center;
+}
+
+footer .wrapper .group .info__img {
+  width: 150px;
+  height: 150px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+footer .wrapper .group .info__icon {
+  margin-right: 10px;
+}
+
+footer .wrapper .group .group__socNetwork {
+  text-align: center;
+  height: 50%;
+  margin-top: 50px;
+}
+
+footer .wrapper .group .group__socNetwork .socNetwork__icon {
+  font-size: 30px;
+}
+
+footer .wrapper .group .group__socNetwork :nth-child(2) {
+  margin-right: 10px;
+}
+
+footer .wrapper .formWrapper {
+  width: 50%;
+  margin-top: 20px;
+}
+
+footer .wrapper .formWrapper__heading {
+  text-align: center;
+}
+
+footer .wrapper .formWrapper .form {
+  width: 100%;
+  max-width: 350px;
+  padding: 1em 2em 2em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+footer .wrapper .formWrapper .form .element {
+  width: 100%;
+  position: relative;
+  padding: 20px 0;
+}
+
+footer .wrapper .formWrapper .form .element__input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1.3px solid #6d6b6b;
+  display: block;
+  height: 40px;
+  outline: none;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+}
+
+@-webkit-keyframes autofill {
+  to {
+    color: white;
+    background: transparent;
+  }
+}
+
+footer .wrapper .formWrapper .form .element__input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+footer .wrapper .formWrapper .form .element__input .element__input--first {
+  margin-top: 0;
+}
+
+footer .wrapper .formWrapper .form .element__input:focus ~ .element__label {
+  top: 0px;
+  color: #6d6b6b;
+  font-size: 15px;
+}
+
+footer .wrapper .formWrapper .form .element__input:focus ~ .element__bar::before,
+footer .wrapper .formWrapper .form .element__input:focus ~ .element__bar::after {
+  width: 50%;
+}
+
+footer .wrapper .formWrapper .form .element__bar {
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+
+footer .wrapper .formWrapper .form .element__bar:before, footer .wrapper .formWrapper .form .element__bar:after {
+  content: '';
+  height: 3px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #6d6b6b;
+  transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+
+footer .wrapper .formWrapper .form .element__bar:before {
+  left: 50%;
+}
+
+footer .wrapper .formWrapper .form .element__bar:after {
+  right: 50%;
+}
+
+footer .wrapper .formWrapper .form .element__label {
+  position: absolute;
+  top: 25px;
+  transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  font-size: 18px;
+  color: white;
+}
+
+footer .wrapper .formWrapper .form .element__label .label__icon {
+  margin-right: 10px;
+}
+
+footer .wrapper .formWrapper .form__button {
+  margin-top: 30px;
+  border: 1.5px solid #6d6b6b;
+  background-color: transparent;
+  color: #6d6b6b;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+
+footer .wrapper .formWrapper .form__button:hover {
+  border: 1.5px solid white;
+  color: white;
+}
+
+footer .wrapper__copyRight {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=style.css.map */

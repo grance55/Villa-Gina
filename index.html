@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Gina</title>
+  <link rel='stylesheet' href='./public/stylesheets/style.css' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="/public/javascript/index.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <img class="header__logo" src="/public/images/logo_small_white.png" alt="">
+
+        <div class="header__scrollDown scrollDown">
+            <p class="scrollDown__p">scroll</p>
+            <i class="fas fa-chevron-down scrollDown__arrow animated infinite bounce fadeInDown"></i>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <img class="group__logo" src="/public/images/VILLA-GINA--LOGO-bijela.png" alt=""> 
+        
+        <div class="navbar__links links">
+            <a class="links__elem" href="">home</a>
+            <a class="links__elem" href="">gallery</a>
+            <a class="links__elem" href="">about</a>
+            <a class="links__elem" href="">rent now</a>
+        </div>
+    </div>
+
+    <div class="section">
+        
+    </div>
+
+
+    <footer>
+        <div class="footer__wrapper wrapper">
+            <div class="warpper__group group">
+                <div class="group__info info">
+                    <img class="info__img" src="/public/images/logo_small_white.png" alt="">
+                    <h3>CONTACT US</h1>
+                    <p><i class="far fa-paper-plane info__icon"></i>grancaric.franko@gmail.com</p>
+                    <p><i class="fas fa-mobile-alt info__icon"></i>099 8417 891</p>
+                </div>
+                <div class="group__socNetwork socNetwork">
+                    <h3>SOCIAL NETWORK</h1>
+                    <i class="fab fa-facebook socNetwork__icon"></i>
+                    <i class="fab fa-instagram socNetwork__icon"></i>
+                </div>
+            </div>
+
+            <div class="wrapper__formWrapper formWrapper">
+                <h3 class="formWrapper__heading">SEND MAIL NOW</h3>
+                <form class="formWrapper__form form" action="">
+                    <div class="form__element element" onchange="handleChangeLabel(this)">
+                        <input type="text" class="element__input js-formInput" name="name">
+                        <span class="element__bar"></span>
+                        <label class="element__label js-formLabel"><i class="fas fa-user label__icon"></i>name</label>
+                    </div>
+                    <div class="form__element element" onchange="handleChangeLabel(this)">
+                        <input type="email" class="element__input js-formInput" name="email">
+                        <span class="element__bar"></span>
+                        <label class="element__label js-formLabel"><i class="fas fa-user label__icon"></i>email</label>
+                    </div>
+                    <div class="form__element element" onchange="handleChangeLabel(this)">
+                        <input type="text" class="element__input js-formInput" name="name">
+                        <span class="element__bar"></span>
+                        <label class="element__label js-formLabel"><i class="fas fa-user label__icon"></i>message</label>
+                    </div>
+
+                    <button class="form__button">send</button>
+                </form>
+            </div>
+        </div>
+
+        <p class="wrapper__copyRight">2019 Copyright © All Rights Reserved.<br>powered by Franko</p>
+    </footer>
+</body>
+</html>
