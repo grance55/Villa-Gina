@@ -36,25 +36,65 @@ $(window).on("load resize scroll",function(e){
         $(navbar).css({
             'background-color' : 'transparent',
         })
-        $(links).css({
-            'color': 'rgb(109, 107, 107)'
-        })
-        $(logo).css({
-            'color': 'rgb(109, 107, 107)',
-        })
+       
         $(logo).attr('src', '/public/images/logo_small_white.png');
     }else{
         $(navbar).css({
             'background-color' : 'white',
         })
-        $(links).css({
-            'color': 'rgb(109, 107, 107)'
-        })
-        $(logo).css({
-            'color': 'rgb(109, 107, 107)'
-        })
+        
         $(logo).attr('src', '/public/images/VILLA-GINA--LOGO-bijela.png');
-    }});
+    }
+});
+
+
+
+function initMap() {
+    var options = {
+        zoom: 13,
+        center: { lat: 44.11972, lng: 15.24222 }
+    }
+
+    var map = new google.maps.Map(document.getElementById('map'), options);
+
+    var marker = new google.maps.Marker({
+        position: { lat: 44.1225, lng: 15.228 },
+        map: map
+    });
+}
+
+
+
+function changeColorLink(link){
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 50)  {
+        $(link).hover(
+            function(){
+                $(link).css({
+                    'color': 'white'
+                })
+            },
+            function(){
+                $(link).css({
+                    'color': 'rgb(109, 107, 107)'
+                })
+            }   
+        )       
+    }else{
+        $(link).hover(
+            function(){
+                $(link).css({
+                    'color': 'black'
+                })
+            },
+            function(){
+                $(link).css({
+                    'color': 'rgb(109, 107, 107)'
+                })
+            }   
+        )       
+    }
+}
+
 
 
 

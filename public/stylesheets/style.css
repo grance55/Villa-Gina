@@ -115,10 +115,6 @@ body {
   color: #6d6b6b;
 }
 
-.navbar .navbar__links .links__elem:hover {
-  color: black;
-}
-
 .section1__p {
   width: 500px;
   text-align: center;
@@ -134,7 +130,7 @@ body {
 
 .section2 img {
   position: absolute;
-  right: -50px;
+  right: -70px;
   width: 60%;
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
@@ -146,6 +142,10 @@ body {
 
 .gallery {
   margin: 200px 100px;
+}
+
+.gallery :nth-child(2) {
+  margin: 5px 0;
 }
 
 .gallery .wrapper {
@@ -163,12 +163,141 @@ body {
   margin: 0 5px;
 }
 
-.gallery .wrapper .wrapper__group {
+.gallery .wrapper .group {
   width: calc(100% * (1/3));
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
-.gallery .wrapper .wrapper__group img {
+.gallery .wrapper .group__img {
   width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.gallery .wrapper .group__inner {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  display: none;
+}
+
+.gallery .wrapper .group:hover .group__inner {
+  display: block;
+}
+
+.gallery .wrapper .group:hover .group__img {
+  opacity: 0.4;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+
+.review {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 200px 0;
+}
+
+.review .host .host__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.review .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.review .group .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.review .group .wrapper__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review .group .wrapper__element .element_p {
+  margin: 5px 0;
+}
+
+.review .group .wrapper__element .element__stars {
+  margin: 5px 0;
+  margin-left: 15px;
+  color: #6d6b6b;
+}
+
+.section5 {
+  width: 100%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section5__group {
+  width: 50%;
+}
+
+.section5__rent {
+  width: 50%;
+  background-color: black;
+  position: relative;
+}
+
+.section5__rent .rent__img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.section5__rent .group {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.section5__rent .group__logo {
+  width: 300px;
 }
 
 footer {
@@ -202,15 +331,6 @@ footer .wrapper .group .info {
   text-align: center;
 }
 
-footer .wrapper .group .info__img {
-  width: 150px;
-  height: 150px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 20px;
-}
-
 footer .wrapper .group .info__icon {
   margin-right: 10px;
 }
@@ -223,15 +343,30 @@ footer .wrapper .group .group__socNetwork {
 
 footer .wrapper .group .group__socNetwork .socNetwork__icon {
   font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+footer .wrapper .group .group__socNetwork .socNetwork__icon:hover {
+  color: #6d6b6b;
 }
 
 footer .wrapper .group .group__socNetwork :nth-child(2) {
   margin-right: 10px;
 }
 
+footer .wrapper .group__img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
 footer .wrapper .formWrapper {
   width: 50%;
-  margin-top: 20px;
 }
 
 footer .wrapper .formWrapper__heading {
