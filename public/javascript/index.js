@@ -1,45 +1,3 @@
-/*
-$(window).resize(function () {
-    myfunction();
- });
-
-
- $(window).scroll(function () {
-    myfunction();
-});
-
-
-$(window).on("load resize scroll",function(e){
-    myfunction();
-});
-
-
-
-
-function myfunction(){
-    let wScroll = $(this).scrollTop();
-    let navbar = document.querySelector('.navbar');
-    var sticky = $(navbar).position().top;
-    
-
-    if(wScroll > 200){
-        $('.group__logo').css({
-            'margin-left': '80%'
-        });
-        $('.navbar__links').css({
-            'right': '100%'
-        });
-    }else if(wScroll < 200){
-        $('.group__logo').css({
-            'left': '0'
-        });
-        $('.navbar__links').css({
-            'right': '0'
-        });
-    }
-}
-
-*/
 
 function handleChangeLabel(element) {
 
@@ -74,7 +32,7 @@ $(window).on("load resize scroll",function(e){
     let links = document.querySelectorAll('.links__elem');
     let logo = document.querySelector('.group__logo');
     
-    if($(window).scrollTop() + $(window).height() > $(document).height() - 100)  {
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 50)  {
         $(navbar).css({
             'background-color' : 'transparent',
         })
