@@ -89,10 +89,10 @@ body {
   background-color: white;
   opacity: 0.9;
   z-index: 100;
-  transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
+  transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
 }
 
 .navbar .group__logo {
@@ -113,6 +113,10 @@ body {
 .navbar .navbar__links .links__elem {
   text-decoration: none;
   color: #6d6b6b;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .section1__p {
@@ -482,11 +486,10 @@ footer .wrapper .formWrapper .form__button {
   padding: 10px;
   font-size: 20px;
   border-radius: 5px;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  -moz-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 
 footer .wrapper .formWrapper .form__button:hover {
@@ -498,5 +501,18 @@ footer .wrapper__copyRight {
   text-align: center;
   font-size: 15px;
   margin-bottom: 0;
+  color: #6d6b6b;
+}
+
+footer .wrapper__copyRight--franko {
+  color: white;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header .header__logo {
+    width: 400px;
+    height: 400px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

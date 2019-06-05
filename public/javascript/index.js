@@ -1,6 +1,5 @@
-
+// promjena css-a prilikom ispunjavanja forme
 function handleChangeLabel(element) {
-
     $(element).children('.js-formInput').blur(function () {
         if ($(element).children('.js-formInput').val().length !== 0) {
             $(element).children('.js-formLabel').css({ 'color': 'rgb(109, 107, 107)', 'font-size': '15px', 'top': '0px' });
@@ -15,7 +14,7 @@ function handleChangeLabel(element) {
 }
 
 
-
+// zaustavljanje skakajuce stijelice na hover
 $(document).on({
     mouseenter: function () {
         $('.scrollDown__arrow').removeClass('animated infinite bounce fadeInDown');
@@ -26,7 +25,7 @@ $(document).on({
 }, '.scrollDown'); 
 
 
-
+// mijenjanje navbara ukoliko se skrola na dno stranice
 $(window).on("load resize scroll",function(e){
     let navbar = document.querySelector('.navbar');
     let links = document.querySelectorAll('.links__elem');
@@ -48,7 +47,7 @@ $(window).on("load resize scroll",function(e){
 });
 
 
-
+// inicijaliziranje mape 
 function initMap() {
     var options = {
         zoom: 13,
@@ -64,7 +63,7 @@ function initMap() {
 }
 
 
-
+// minjenaje bolje linka u navbaru na hover
 function changeColorLink(link){
     if($(window).scrollTop() + $(window).height() > $(document).height() - 50)  {
         $(link).hover(
