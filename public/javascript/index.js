@@ -26,14 +26,18 @@ $(document).on({
 
 
 // mijenjanje navbara ukoliko se skrola na dno stranice
-$(window).on("load resize scroll",function(e){
+$(window).on("scroll",function(e){
     let navbar = document.querySelector('.navbar');
     let links = document.querySelectorAll('.links__elem');
-    let logo = document.querySelector('.group__logo');
-    
-    if($(window).scrollTop() + $(window).height() > $(document).height() - 50)  {
+    let logo = document.querySelector('.navbar__logo');
+    let menu = document.querySelectorAll('.js-menu__line');
+
+    if($(window).scrollTop() >=  $(document).height() - $('footer').height() - 50)  {
         $(navbar).css({
-            'background-color' : 'transparent',
+            'background-color' : 'black',
+        })
+        $(menu).css({
+            'background-color': 'white'
         })
        
         $(logo).attr('src', '/public/images/logo_small_white.png');
@@ -42,6 +46,10 @@ $(window).on("load resize scroll",function(e){
             'background-color' : 'white',
         })
         
+        $(menu).css({
+            'background-color': 'black'
+        })
+
         $(logo).attr('src', '/public/images/VILLA-GINA--LOGO-bijela.png');
     }
 });
@@ -94,6 +102,24 @@ function changeColorLink(link){
     }
 }
 
+// prikazivanje ili skrivanje menija u mobilnom ili tablet modu
+function changeMenu(x){
+    let elem1 = $(x).children('.js-menu__line--first'),
+        elem2 = $(x).children('.js-menu__line--middle'),
+        elem3 = $(x).children('.js-menu__line--last'),
+        menu = document.querySelector('.js-menuMobile'),
+        navbar = document.querySelector('.navbar'),
+        logo = document.querySelector('.navbar__logo');
 
 
+    $(navbar).toggleClass('is-active--navbar');
+    $(logo).attr('src', '/public/images/logo_small_white.png');
+    $('body').toggleClass('stop-scrolling');
 
+    $(elem1).toggleClass('is-activ--first');
+    $(elem2).toggleClass('is-activ--middle');
+    $(elem3).toggleClass('is-activ--last'); 
+    
+    
+    $(menu).toggleClass('is-active--menuMobile');
+}
