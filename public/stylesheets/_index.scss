@@ -223,6 +223,7 @@
   padding: 200px 0;
 
   .airbnb {
+    margin: 50px 0;
     &__logo {
       width: 200px;
     }
@@ -232,17 +233,16 @@
     margin: 100px 0;
     width: 50%;
 
-    .group--hostImg {
+    .host__group--hostImg {
+      margin: 0 auto;
       margin-bottom: 50px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
     }
 
     .group {
       align-items: center;
-      .group__img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-      }
 
       &__list {
         list-style-type: none;
@@ -257,6 +257,10 @@
     .wrapper {
       display: flex;
       flex-direction: row;
+
+      .element--first {
+        align-items: flex-end;
+      }
 
       &__element {
         display: flex;
@@ -521,6 +525,12 @@ footer {
     }
   }
 
+  .review {
+    .host {
+      width: 70%;
+    }
+  }
+
   footer {
     height: auto;
 
@@ -632,8 +642,16 @@ footer {
     }
   }
 
+  .gallery {
+    display: none;
+  }
+
   .review {
     flex-direction: column;
+
+    .host {
+      width: 70%;
+    }
   }
 
   .section5 {
@@ -669,8 +687,8 @@ footer {
         width: 100%;
         margin-top: 100px;
 
-        &__socNetwork {
-          margin: 25px 0;
+        .socNetwork {
+          margin: 20px 0;
         }
 
         &__img {
